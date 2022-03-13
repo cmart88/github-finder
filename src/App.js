@@ -11,9 +11,9 @@ function App() {
   return (
     <GithubProvider>
       <Router>
-        <div className='flex flex-col justify-between '>
+        <div className='flex flex-col justify-between  '>
           <Navbar />
-          <main className='container mx-auto px-40 pb-12'>
+          <main className=' mx-auto px-40 pb-12 h-100 '>
             <Routes>
               <Route path='/' element={<Home />}></Route>
               <Route path='/about' element={<About />}></Route>
