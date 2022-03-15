@@ -28,6 +28,19 @@ export const GithubProvider = ({ children }) => {
     });
   };
   const setLoading = () => dispatch({ type: "SET_LOADING" });
+  const searchUsers = async ()=>{
+      setLoading();
+      const response = await fetch(`${GITHUB_URL}/search/users?q=${}`, {
+        headers: {
+          Authorization: `token=${GITHUB_TOKEN}`,
+        },
+      });
+      const data = await response.json();
+      dispatch({
+        type: "GET_USERS",
+        payload: data,
+      });
+  }
 
   return (
     <GithubContext.Provider
