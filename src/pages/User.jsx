@@ -72,6 +72,44 @@ function User() {
                   </a>
                 </div>
               </div>
+              <div className='w-full rounded-lg shadow-md bg-base-100 stats'>
+                {location && (
+                  <div className='stat'>
+                    <div className='stat-title text-md'>Location</div>
+                    <div className='text-lg stat-value'>{location}</div>
+                  </div>
+                )}
+                {blog && (
+                  <div className='stat'>
+                    <div className='stat-title text-md'>Website</div>
+                    <div className='text-lg stat-value'>
+                      <a href={`${blog}`} target='_blank' rel='noreferrer'>
+                        {blog}
+                      </a>
+                    </div>
+                  </div>
+                )}
+                {twitter_username && (
+                  <div className='stat'>
+                    <div className='stat-title text-md'>Twitter</div>
+                    <div className='text-lg stat-value'>
+                      <a
+                        href={`https://twitter.com/${twitter_username}`}
+                        target='_blank'
+                        rel='noreferrer'>
+                        {twitter_username}
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+          <div className='w-full py-5 mb-6 rounded-lg shadow-md bg-base-100 stats'>
+            <div className='stat'>
+              <div className='stat-figure text-secondary'>
+                <FaUsers className='text-3xl md:text-5xl' />
+              </div>
             </div>
           </div>
         </div>
